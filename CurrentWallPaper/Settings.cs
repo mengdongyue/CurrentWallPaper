@@ -27,7 +27,7 @@ namespace CurrentWallPaper
 
 			AutoRefreshInterval = GetAppSettingsItem( config, _keyInterval, 30000 );
 			OpacityHover = GetAppSettingsItem( config, _keyHover, 90 );
-			OpacityLeave = GetAppSettingsItem( config, _keyLeave, 30 );
+			OpacityLeave = GetAppSettingsItem( config, _keyLeave, 20 );
 		}
 
 		private int GetAppSettingsItem( Configuration config, string keyName, int defaultValue )
