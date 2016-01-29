@@ -150,6 +150,7 @@
 			this.Name = "MainForm";
 			this.Opacity = 0.9D;
 			this.ShowIcon = false;
+			this.ShowInTaskbar = false;
 			this.Text = "MainForm";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
