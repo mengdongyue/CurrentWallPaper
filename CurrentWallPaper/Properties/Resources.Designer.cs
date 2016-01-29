@@ -81,6 +81,42 @@ namespace CurrentWallPaper.Properties {
         }
         
         /// <summary>
+        ///   查找类似 E&amp;xit 的本地化字符串。
+        /// </summary>
+        internal static string MenuExit {
+            get {
+                return ResourceManager.GetString("MenuExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Show the main form. 的本地化字符串。
+        /// </summary>
+        internal static string MenuShowMainForm {
+            get {
+                return ResourceManager.GetString("MenuShowMainForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Message 的本地化字符串。
+        /// </summary>
+        internal static string MessageBoxCaption {
+            get {
+                return ResourceManager.GetString("MessageBoxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Are you sure you want to exit? 的本地化字符串。
+        /// </summary>
+        internal static string MsgExitApp {
+            get {
+                return ResourceManager.GetString("MsgExitApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap refresh_16 {

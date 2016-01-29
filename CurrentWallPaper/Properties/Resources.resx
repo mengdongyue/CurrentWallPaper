@@ -127,4 +127,16 @@
   <data name="delete_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="MenuShowMainForm" xml:space="preserve">
+    <value>Show the main form.</value>
+  </data>
+  <data name="MessageBoxCaption" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MsgExitApp" xml:space="preserve">
+    <value>Are you sure you want to exit?</value>
+  </data>
 </root>

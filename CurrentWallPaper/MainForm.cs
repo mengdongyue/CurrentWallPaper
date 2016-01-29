@@ -19,6 +19,9 @@ namespace CurrentWallPaper
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
+			NotifyIconHelper helper = new NotifyIconHelper( this, false );
+			helper.AddMenuItem( "Settings", menuItemSettings_Click );
+
 			_settings = new Settings();
 			timer1.Interval = _settings.AutoRefreshInterval * 1000;
 
