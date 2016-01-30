@@ -131,7 +131,7 @@
     <value>E&amp;xit</value>
   </data>
   <data name="MenuShowMainForm" xml:space="preserve">
-    <value>Show the main form.</value>
+    <value>Show the main form</value>
   </data>
   <data name="MessageBoxCaption" xml:space="preserve">
     <value>Message</value>

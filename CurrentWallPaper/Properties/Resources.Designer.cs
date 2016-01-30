@@ -90,7 +90,7 @@ namespace CurrentWallPaper.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Show the main form. 的本地化字符串。
+        ///   查找类似 Show the main form 的本地化字符串。
         /// </summary>
         internal static string MenuShowMainForm {
             get {
