@@ -63,8 +63,7 @@ namespace CurrentWallPaper
 			if( stream == null || stream.Length == 0 )
 				return;
 
-			string targetFile = configFile;
-			using( FileStream fs = new FileStream( targetFile, FileMode.Create, FileAccess.Write ) )
+			using( FileStream fs = new FileStream( configFile, FileMode.Create, FileAccess.Write ) )
 			{
 				StreamReader reader = new StreamReader( stream, Encoding.UTF8 );
 				string txt = reader.ReadToEnd();
