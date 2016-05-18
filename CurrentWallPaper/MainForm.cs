@@ -35,7 +35,11 @@ namespace CurrentWallPaper
 
 		private void lblPicFile_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
 		{
-			Process.Start( lblPicFile.Tag.ToString() );
+			string file = lblPicFile.Tag.ToString();
+			if( File.Exists( file ) )
+				Process.Start( file );
+			else
+				MessageBox.Show( string.Format( "File Not Found. \r\n\r\n  {0}", file ) );
 		}
 
 		private void btnDelete_Click( object sender, EventArgs e )
