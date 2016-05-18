@@ -15,6 +15,9 @@ namespace CurrentWallPaper
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault( false );
+
+			Settings.PrepareConfigFile();
+
 			Application.Run( new MainForm() );
 		}
 	}

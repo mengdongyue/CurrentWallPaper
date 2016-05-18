@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.IO;
+using System.Reflection;
+using System.Text;
 
 namespace CurrentWallPaper
 {
@@ -50,6 +50,30 @@ namespace CurrentWallPaper
 			config.AppSettings.Settings[ _keyLeave ].Value = OpacityLeave.ToString();
 
 			config.Save( ConfigurationSaveMode.Full );
+		}
+
+		public static void PrepareConfigFile()
+		{
+			string configFile = System.Windows.Forms.Application.ExecutablePath + ".config";
+			if( File.Exists( configFile ) && ( new FileInfo( configFile ).Length > 0 ) )
+				return;
+
+			Assembly assembly = Assembly.GetExecutingAssembly();
+			Stream stream = assembly.GetManifestResourceStream( "CurrentWallPaper.App.config" );
+			if( stream == null || stream.Length == 0 )
+				return;
+
+			using( FileStream fs = new FileStream( configFile, FileMode.Create, FileAccess.Write ) )
+			{
+				StreamReader reader = new StreamReader( stream, Encoding.UTF8 );
+				string txt = reader.ReadToEnd();
+				reader.Close();
+
+				StreamWriter writer = new StreamWriter( fs, Encoding.UTF8 );
+				writer.Write( txt );
+				writer.Flush();
+				writer.Close();
+			}			
 		}
 	}
 }
